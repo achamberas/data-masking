@@ -1,0 +1,6 @@
+*.asc
+.DS_Store
+*.csv
+*.txt
+Input_Files
+Output_Files
