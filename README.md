@@ -1,6 +1,6 @@
 # Obfuscation of Data Files
 
-This project is about X because of Y
+Main purpose of this project is to crawl through files, detect all the fields in those files and mask appropriate fields.
 
 ## Prerequisite
 
