@@ -1,5 +1,44 @@
 # Obfuscation of Data Files
 
+This project is about X because of Y
+
+## Prerequisite
+
+In order to run this project you'll need to isntall these libraries:
+* `openpyxl`
+* `anonympy`
+* `xlrd` (version > 1.0.0)
+* `cape-privacy`
+
+Here's a command that will install the dependencies (this is using python's pip package manager but conda should work as well):
+```
+pip install openpyxl anonympy xlrd>=1.0.0 cape-privacy
+```
+
+Also this project requires the folder structure below
+
+```
+├── root # this is a variable and has to be set in `Data Masking.ipynb` notebook
+│   ├── Input_Files
+│   ├── Output_Files/
+```
+
+## Data Masking Process - High Level
+
+1. Get list of files that need to be masked
+2. Manually add extra columns required for processing fields (ie `header_row,parent_folder,child_folder,skip,notes`)
+3. Go through each file and compile a list of fields to be masked
+4. Store this list in a google sheet
+5. Go trhough those files, mask the fields using `anonympy` library, and save results of masked files to a specific folder on the local machine. 
+
+## 
+
+
+
+
+
+## Old Version Of Read Me
+
 ## Masking Data
 
 To mask data that already exist in data files, open the `Data Masking.ipynb` notebook.  
