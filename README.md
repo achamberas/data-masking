@@ -71,6 +71,8 @@ After that dataframe has been written to `data_files.xlsx` open the `files` shee
 * `skip` - is the file going to be skipped during masking process or not
 * `notes` - any notes that you might have
 
+  **==BE SURE TO SAVE THE EXCEL FILE==**
+
 ### Step 3 - Find All The Fields In New Files
 
 After `data_files.xlsx` has been manually edited, go back to the notebook and load the `data_files.xlsx` again with updated info. From there the code will go through all of the files and find all the fields witin those files. All of that info gets stored in a dataframe that holds all the metadata about those fields. The dataframe has these columns:
@@ -93,11 +95,14 @@ This gets stored in back to `data_files.xlsx` to `mapping rules` sheet.
     * This could be either: 
         * `categorical_fake` - creates a fake category
         * `categorical_tokenization` - it masks data in a way where it can be reverted to the original data point. Also if the same value of the field shows up somewhere else it will use the same value, so merging data is easier
-        * `categorical_resampling` - randomly sample from the original population and assign values 
+        * `categorical_resampling` - randomly sample from the original population and assign values
+        * `datetime_noise` - will adjust a date +/- about 30 days.
 * `mask_type`
     * if using `categorical_fake`, determine what kind of category are you faking (ie first name would be `first_name`. More info can on available categories can be found [here](https://arc.net/l/quote/szfjtfmf))
 
 If the field does not have `mask_method` & `mask_type` values it will _not_ be masked.
+
+  **==BE SURE TO SAVE THE EXCEL FILE==**
 
 ### Step 5 - Mask The Data
 
